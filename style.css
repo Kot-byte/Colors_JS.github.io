@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+}
+header {
+    position: fixed;
+    background: rgb(0, 0, 0,0.1);
+    height: auto;
+    width: auto;
+    padding: 10px;
+    margin: 10px; 
+    margin-bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Задайте значение z-index больше, чем у main */
+    color: rgba(255, 255, 255, 0.703);
+    border-radius: 10px;
+}
+
+main{
+    position: relative;
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    
+   
+}
+.col{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center ;
+}
+.col h2{
+   padding: 10px;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+.col h2:hover{
+    background: rgb(0, 0, 0,0.1);
+    cursor: pointer;
+}
+.col button{
+    outline: none;
+    border:none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.3s;
+    padding: 10px;
+}
+.col button:hover{
+    background: rgb(0, 0, 0,0.1);
+    cursor: pointer;
+}
+#notificationP {
+    display: flex;
+}
+.copied-message {
+    background-color: rgb(0, 0, 0,0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.copied-message.hidden {
+    opacity: 0; 
+}
